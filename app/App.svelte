@@ -4,10 +4,10 @@ import { showModal } from "svelte-native"
 import Article from "./modals/Article.svelte"
 
 const api = "5601425ba11d4e97bc73a41da921ee79"
-const subject = "travel"
+const subject = "travel" // har subject = travel for å få med nyheter innen reiseliv
 
 const getData = () => {
-    const url = `https://newsapi.org/v2/everything?q=${subject}&language=en&apiKey=${api}`
+    const url = `https://newsapi.org/v2/everything?q=${subject}&language=en&apiKey=${api}` // har tatt alle nyheter med søkeordet "travel"
     fetch(url)
         .then(response => response.json())
         .then(json => {
@@ -40,7 +40,7 @@ const showArticle = async (article) => {
             <stackLayout class="articles">
                 {#each articles as article}
                     <stackLayout
-                        on:tap={ () => showArticle(article)}
+                        on:tap={ () => showArticle(article)} 
                         class="article">
                         <image class='img-rounded' src='{article.urlToImage}' alt='cover' stretch='aspectFill' />
                         <label textWrap="{true}" class="h2 text-center" text="{article.title}" />
