@@ -1,6 +1,6 @@
 <script>
-    import { closeModal } from "svelte-native"
-    export let article
+    import { closeModal } from "svelte-native" // for å lukke <frame>
+    export let article // sender article fra Article.svelte til App.svelte
 </script>
 
 <frame>
@@ -17,7 +17,7 @@
                     alt="article cover image"
                     stretch="fill" />
                 
-                <button on:tap={ () => closeModal() } text="close" />
+                <button on:tap={ () => closeModal() } text="close" /> <!-- on:tap = lukker article.svelte-->
             </stackLayout>
         </scrollView>
     </page>
