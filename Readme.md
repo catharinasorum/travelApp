@@ -1,2 +1,3 @@
+# Svelte Native World Wide Travel News
 
-Hello Darkness my old friend
+En helt enkel app om nyheter fra reiselivet, laget med Svelte Native.
